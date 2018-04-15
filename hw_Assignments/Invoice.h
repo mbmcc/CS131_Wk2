@@ -31,31 +31,71 @@ If the price per item is not positive,
 
 class Invoice
 {
-  public
-    //constructor
+  public:
+    //constructor // Item (2)
+    Invoice( int number, std::string description, int qty, int price )
     : partNumber( number ), partDescription( description ), 
-      partQuantaty( qty ), partPrice( price )// Item (2)
-    {      //Do stuff constructor functions
-    }
+      partQuantaty( qty ), partPrice( price )
+    {     //Do stuff constructor functions
+    }     //Empty function
     // Class functions // Item (3)
     
     // setPartNumber
+    void setPartNumber( int number )
+    {
+	    partNumber = number; //store number in partNumber
+    }
     // getPartNumber
+    int getPartNumber() const
+    {
+      return parNumber; //display part number
+    }  
     
     // setPartDescription
+    void setPartDescription( std::string description )
+    {	
+		  partDescription( = description; //store description in partDescription
+    }
+    
     // getPartDescription
-    
+    std::string getPartDescription() const
+    {
+      return partDescription; //displays the part description string
+    }
+
     // setpartQuantaty
+    void setPartQuantaty( int qty  )
+    {
+      partQuantaty = qty; //store qty in partQuantaty 
+    }
+    
     // getpartQuantaty
+    int getPartQuantaty() const
+    {
+      return partQuantaty; //display number of parts ordered
+      }
+
+    // setPartPrice
+    void setPartPrice( int price )
+    {
+	    partPrice = price; //store price in partPrice
+    }
     
-    // setpartPrice
     // getpartPrice
-    
+    int getPartPrice() const
+    {
+      return partPrice;// dispaly part price
+    }
+
     // Get Invoice amount // Item (4)
     int getInvoiceAmount(partPrice, partQuantaty)
     {
-      
+      return partPrice * partQuantaty; //total price
     }
-  private
+  private:
     // variable definition
+    int number; 
+    std::string description; 
+    int number; 
+    int price;
 };
