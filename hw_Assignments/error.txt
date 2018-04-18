@@ -1,0 +1,76 @@
+In file included from hardware_invoice.cpp:6:
+./Invoice.h:32:72: error: member initializer 'partNumber' does not name a non-static data member or base class
+    Invoice(int number, std::string description, int qty, int price) : partNumber(number), partDescription(description), partQuantaty(qty), partPrice(price)
+                                                                       ^~~~~~~~~~~~~~~~~~
+./Invoice.h:32:92: error: initializer 'partDescription' does not name a non-static data member or base class; did you mean the member 'description'?
+    Invoice(int number, std::string description, int qty, int price) : partNumber(number), partDescription(description), partQuantaty(qty), partPrice(price)
+                                                                                           ^~~~~~~~~~~~~~~
+                                                                                           description
+./Invoice.h:39:17: note: 'description' declared here
+    std::string description; 
+                ^
+./Invoice.h:32:122: error: member initializer 'partQuantaty' does not name a non-static data member or base class
+    Invoice(int number, std::string description, int qty, int price) : partNumber(number), partDescription(description), partQuantaty(qty), partPrice(price)
+                                                                                                                         ^~~~~~~~~~~~~~~~~
+./Invoice.h:32:141: error: member initializer 'partPrice' does not name a non-static data member or base class
+    Invoice(int number, std::string description, int qty, int price) : partNumber(number), partDescription(description), partQuantaty(qty), partPrice(price)
+                                                                                                                                            ^~~~~~~~~~~~~~~~
+./Invoice.h:48:6: error: use of undeclared identifier 'partNumber'
+            partNumber = number; //store number in partNumber
+            ^
+./Invoice.h:53:14: error: use of undeclared identifier 'partNumber'
+      return partNumber; //display part number
+             ^
+./Invoice.h:59:5: error: use of undeclared identifier 'partDescription'; did you mean 'description'?
+                  partDescription = description; //store description in partDescription
+                  ^~~~~~~~~~~~~~~
+                  description
+./Invoice.h:57:42: note: 'description' declared here
+    void setPartDescription( std::string description )
+                                         ^
+./Invoice.h:65:14: error: use of undeclared identifier 'partDescription'
+      return partDescription; //displays the part description std::string
+             ^
+./Invoice.h:71:7: error: use of undeclared identifier 'partQuantaty'
+      partQuantaty = qty; //store qty in partQuantaty 
+      ^
+./Invoice.h:77:14: error: use of undeclared identifier 'partQuantaty'
+      return partQuantaty; //display number of parts ordered
+             ^
+./Invoice.h:83:6: error: use of undeclared identifier 'partPrice'
+            partPrice = price; //store price in partPrice
+            ^
+./Invoice.h:89:14: error: use of undeclared identifier 'partPrice'
+      return partPrice;// dispaly part price
+             ^
+hardware_invoice.cpp:18:37: error: 'Invoice' does not refer to a value
+  cout << "The part number is: " << Invoice.getPartNumber() << "\n"\
+                                    ^
+./Invoice.h:28:7: note: declared here
+class Invoice {
+      ^
+hardware_invoice.cpp:19:37: error: 'Invoice' does not refer to a value
+       << "The description is: " << Invoice.getPartDescription() << "\n"\
+                                    ^
+./Invoice.h:28:7: note: declared here
+class Invoice {
+      ^
+hardware_invoice.cpp:20:34: error: 'Invoice' does not refer to a value
+       << "The quantity is: " << Invoice.getPartQuantaty() << "\n"\
+                                 ^
+./Invoice.h:28:7: note: declared here
+class Invoice {
+      ^
+hardware_invoice.cpp:21:40: error: 'Invoice' does not refer to a value
+       << "The price per unit is: " << Invoice.getPartPrice() << "\n"\
+                                       ^
+./Invoice.h:28:7: note: declared here
+class Invoice {
+      ^
+hardware_invoice.cpp:22:36: error: 'Invoice' does not refer to a value
+       << "The total cost is: " << Invoice.getInvoiceAmount() << "\n"\
+                                   ^
+./Invoice.h:28:7: note: declared here
+class Invoice {
+      ^
+17 errors generated.
