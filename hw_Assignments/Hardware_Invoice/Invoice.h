@@ -1,6 +1,5 @@
-//*******************************************************************************/
-//*  ###############  CS131_wk2_McCourry Invoice Class ##################
-// 
+//*******************************************************************************
+//   ###############  CS131_wk2_McCourry Invoice Class ##################
 // 
 // (1) Create a class called Invoice that a hardware store might use to represent an invoice
 // for an item sold at the store. An Invoice should include four data members—
@@ -17,33 +16,38 @@
 // then returns the amount as an int value. 
 // If the quantity is not positive, it should be set to 0. 
 // If the price per item is not positive, it should be set to 0.
+// 
 //   ############################################################################
 //*/
 // Invoice.h
 // Class definition separate from the main
 #include <iostream>
 #include <string>
+
+#ifndef Invoice_H
+#define Invoice_H
 // Invoice class definition // Item (1)
 
-class Invoice {
+class Invoice 
+{
 
   public:
-    //constructor // Item (2)
-    Invoice(int number, std::string description, int qty, int price) : partNumber(number), partDescription(description), partQuantaty(qty), partPrice(price)
-    {     //Do stuff constructor functions
-    };    //Empty functaion
-    // Class functions // Item (3)
+    Invoice(int number, std::string description, int qty, int price)
+    { //Do stuff constructor functions
+    }
+
+    
+   // Class functions // Item (3)
    private:
-    // variable definition
-    int number; 
-    std::string description; 
-    int qty; 
-    int price;   
-  
+     // variable definition
+     int number; 
+     std::string description; 
+     int qty; 
+     int price;   
+};
     // Member function definitions
-    //
     // setPartNumber
-    void setPartNumber( int number )
+    void setPartNumber( int number ) : partNumber(number)
     {
 	    partNumber = number; //store number in partNumber
     }
@@ -96,3 +100,4 @@ class Invoice {
     }
 
 };
+#endif
