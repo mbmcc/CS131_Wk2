@@ -8,7 +8,13 @@ using namespace std;
 class BMI {
   public:
   // Default Constructor
-  BMI()
+  BMI();
+  
+  // Overload Constructor
+  BMI(string, int, double);
+  
+  //Destructor
+  ~BMI();
   
   private:
   // Member variables
