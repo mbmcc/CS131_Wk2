@@ -1,6 +1,6 @@
+#include "BMI.h"
 #include <iostream>
 #include <string>
-#Include "BMI.h"
 using namespace std;
 
 int main() {
@@ -16,9 +16,15 @@ int main() {
   cout << "Enter your weight (in pounds): ";
   cin >> weight;
   
-  BMI Student_0; //automatically uses the default constructor in the header file
-  BMI Student_1(name, height, weight); //uses the overload constructor
+  BMI Student_1(name, height, weight); 
+  //uses the overload constructor
   
+  cout << endl <<
+    "Patient name: " << Student_1.getName() << "\n" <<
+    "Patient weight: " << Student_1.getWeight() << "\n" <<
+    "Patient height: " << Student_1.getHeight() << "\n" <<
+  endl;
+       
   return 0;
 
 }
