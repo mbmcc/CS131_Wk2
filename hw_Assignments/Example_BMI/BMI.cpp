@@ -33,3 +33,21 @@ int BMI::getHeight() const {
 double BMI::getWeight() const {
   return newWeight;
 }
+
+void BMI::setName(std::string name) {
+  newName = name;
+}
+
+void BMI::setHeight(int height) {
+  newHeight = height;
+}
+
+void BMI::setWeight(double weight) {
+  newWeight = weight;
+}
+
+double BMI::calculateBMI() {
+  return ((newWeight * 703) / (newHeight * newHeight));
+}
+
+ 
